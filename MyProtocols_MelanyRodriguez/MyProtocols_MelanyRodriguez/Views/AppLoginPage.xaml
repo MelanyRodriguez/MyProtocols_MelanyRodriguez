@@ -5,7 +5,7 @@
              Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="Gainsboro"
-             BackgroundImageSource="AppLoginBG(1)">
+             BackgroundImageSource="AppLoginBG">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Padding="50,25,50,25">
             <Entry x:Name="TxtUserName" Placeholder="Email" FontSize="30"  Keyboard="Email"/>
@@ -13,7 +13,7 @@
             <Entry x:Name="TxtPassword" Placeholder="Password" FontSize="30" Keyboard="Default" IsPassword="True" />
             <Switch x:Name="SwShowPassword" IsToggled="False" Toggled="SwShowPassword_Toggled" />
             
-            <Button x:Name="BtnLogin" Text="LOGIN" BackgroundColor="Green" CornerRadius="15" />
+            <Button x:Name="BtnLogin" Text="LOGIN" BackgroundColor="Green" CornerRadius="15"  Clicked="BtnLogin_Clicked"/>
             
             <Button x:Name="BtnSingUp" Text="SING UP" BackgroundColor="Blue" CornerRadius="15" />
 

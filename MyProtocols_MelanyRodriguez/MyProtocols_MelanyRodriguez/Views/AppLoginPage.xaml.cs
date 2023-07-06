@@ -28,5 +28,10 @@ namespace MyProtocols_MelanyRodriguez.Views
                 TxtPassword.IsPassword = true;
             }
         }
+
+        private async void BtnLogin_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StarPage());
+        }
     }
 }
