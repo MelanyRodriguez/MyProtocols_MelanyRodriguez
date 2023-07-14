@@ -17,7 +17,10 @@ namespace MyProtocols_MelanyRodriguez
 
             //definimos la forma de apilar paginas en la pantalla y cual es la primera pagina 
             //que mostraremos
-            MainPage = new AppShell();
+
+            MainPage = new NavigationPage (new AppLoginPage());
+          
+            
         }
 
         protected override void OnStart()

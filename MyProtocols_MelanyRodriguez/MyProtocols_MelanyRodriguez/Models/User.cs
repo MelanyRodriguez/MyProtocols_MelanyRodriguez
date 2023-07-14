@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -51,7 +52,8 @@ namespace MyProtocols_MelanyRodriguez.Models
                 //para agregar el sufijo y lograr la ruta completa de consumo del end point
                 //que se quiere usar
 
-                string RouteSufix = string.Format("", this.Email, this.Password);
+                string RouteSufix = string.Format("Users/ValidateLogin?/username={0}&password={1}", 
+                                                                                     this.Email, this.Password);
 
                 //armamos la ruta completa al endpoint en el API 
                 string URL = Services.APIConection.ProductionPrefijxURL + RouteSufix;

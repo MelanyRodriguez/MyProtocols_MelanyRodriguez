@@ -15,7 +15,7 @@
             
             <Button x:Name="BtnLogin" Text="LOGIN" BackgroundColor="Green" CornerRadius="15"  Clicked="BtnLogin_Clicked"/>
             
-            <Button x:Name="BtnSingUp" Text="SING UP" BackgroundColor="Blue" CornerRadius="15" />
+            <Button x:Name="BtnSingUp" Text="SING UP" BackgroundColor="Blue" CornerRadius="15" Clicked="BtnSingUp_Clicked"/>
 
             <Label x:Name="LblPasswordRecobery" Text="Password Recovery..."  />
 
