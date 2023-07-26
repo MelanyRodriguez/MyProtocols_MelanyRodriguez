@@ -3,18 +3,84 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyProtocols_MelanyRodriguez.Views.UserSingUpPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20" BackgroundColor="Coral">
 
-            <Entry Placeholder="Username/Email"/>
-            <Entry Placeholder="Password"/>
-            <Entry Placeholder="Name"/>
-            <Entry Placeholder="Backup Email"/>
-            
+            <Entry x:Name="TxtEmail" Placeholder="Username/Email" Keyboard="Email" ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
 
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="LavenderBlush"/>
+                        <Setter Property="TextColor" Value="Gold"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
 
+            <Entry  x:Name="TxtPassword" Placeholder="Password" Keyboard="Plain" ClearButtonVisibility="WhileEditing">
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="LavenderBlush"/>
+                    <Setter Property="TextColor" Value="Gold"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                </Trigger>
+            </Entry.Triggers>
+            </Entry>
+
+            <Entry  x:Name="TxtName" Placeholder="Name" Keyboard="Text" ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="LavenderBlush"/>
+                        <Setter Property="TextColor" Value="Gold"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+
+            <Entry  x:Name="TxtBackUpEmail" Placeholder="Backup Email" Keyboard="Email" ClearButtonVisibility="WhileEditing">
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="LavenderBlush"/>
+                    <Setter Property="TextColor" Value="Gold"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                </Trigger>
+            </Entry.Triggers>
+            </Entry> 
+                    
+            <Entry  x:Name="TxtPhoneNumber" Placeholder="Phone Number" Keyboard="Telephone" ClearButtonVisibility="WhileEditing">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="LavenderBlush"/>
+                        <Setter Property="TextColor" Value="Gold"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+                
+            <Editor  x:Name="TxtAddress" Placeholder="Address" MinimumHeightRequest="0" AutoSize="TextChanges" Keyboard="Text">
+                <Editor.Triggers>
+                    <Trigger TargetType="Editor" Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="LavenderBlush"/>
+                        <Setter Property="TextColor" Value="Gold"/>
+                        <Setter Property="FontSize" Value="20"/>
+                        <Setter Property="FontAttributes" Value="Bold"/>
+                    </Trigger>
+                </Editor.Triggers>
+                </Editor>
+
+            <Picker  x:Name="PkrUserRole" Title="Select User Role" ItemDisplayBinding="{Binding Description}">
+                
+                </Picker> 
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="BtnAdd" Text="Apply" CornerRadius="15" BackgroundColor="Gold" FontSize="20" Clicked="BtnAdd_Clicked" />
+                <Button x:Name="BtnCncel" Text="Cancel" CornerRadius="15" BackgroundColor="Aqua" FontSize="20" />
+            </StackLayout>
+           
 
         </StackLayout>
     </ContentPage.Content>
