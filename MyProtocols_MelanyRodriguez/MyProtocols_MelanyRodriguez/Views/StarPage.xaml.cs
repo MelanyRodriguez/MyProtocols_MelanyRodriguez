@@ -15,6 +15,12 @@ namespace MyProtocols_MelanyRodriguez.Views
         public StarPage()
         {
             InitializeComponent();
+            LoadUserName();
+        }
+
+        private void LoadUserName()
+        {
+            LblUserName.Text = GlobalObjects.MyLocalUser.Nombre.ToUpper();
         }
     }
 }

@@ -18,13 +18,37 @@ namespace MyProtocols_MelanyRodriguez.ViewModels
 
         public User MyUser { get; set; }
         public UserRole MyUserRole { get; set; }
+        public UserDTO MyUserDTO { get; set; }
         public UserViewModel() 
         { 
             MyUser = new User();
             MyUserRole = new UserRole();
+            MyUserDTO = new UserDTO();
         }
 
         //funciones 
+
+        //funcion que carga los datos del objeto del usuario global
+        public async Task<UserDTO> GetUserDataAsync(string PEmail)
+        {
+            if (IsBusy) return null;
+            IsBusy = true;
+
+            try
+            {
+                UserDTO userDTO = new UserDTO();
+                userDTO= await MyUserDTO.GetUserInfo(PEmail);
+                if (userDTO == null) return null;
+                return userDTO;
+              
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            finally { IsBusy = false; }
+        }
 
         //funcion para validar el ingreso del usuario al app por medio del login
 
@@ -64,7 +88,7 @@ namespace MyProtocols_MelanyRodriguez.ViewModels
         }
         //carga la lista de roles, que se usaran en el picker de roles en la creacion
         //de un usuario nuevo
-        public async Task<List<UserRole>> GetUserRoles()
+        public async Task<List<UserRole>> GetUserRolesAsync()
         {
             try
             {

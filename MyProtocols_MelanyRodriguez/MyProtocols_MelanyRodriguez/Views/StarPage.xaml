@@ -8,6 +8,9 @@
         
             <FlexLayout Direction="Column" Padding="40,50" BackgroundColor="LightGray">
 
+                <Label x:Name="LblUserName" TextColor="Aqua" FontSize="20"
+                 HorizontalTextAlignment="Center" Padding="0,0,0,30"/>
+
                 <Label Text="SELECT AN ACTION" TextColor="White" FontSize="20" HorizontalTextAlignment="Center" Padding="0,0,0,20"/>
 
                     <Grid>

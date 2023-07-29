@@ -63,7 +63,9 @@ namespace MyProtocols_MelanyRodriguez.Views
 
                     if (R)
                     {
-                        //si la validacion es correcta permite el ingreso al sistema 
+                        //si la validacion es correcta permite el ingreso al sistema tendremos un
+                        //objeto Global
+                        GlobalObjects.MyLocalUser= await viewModel.GetUserDataAsync(TxtUserName.Text.Trim());
                         await Navigation.PushAsync(new StarPage());
                     }
                     else

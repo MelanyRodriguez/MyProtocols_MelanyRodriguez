@@ -10,6 +10,7 @@ namespace MyProtocols_MelanyRodriguez.Models
 {
    public class User
     {
+        [JsonIgnore]
         //es mala idea tener un solo objeto de comunicacion contra el API recomiendo tener
         //uno por cada clase se comunique con el API
 
@@ -65,6 +66,8 @@ namespace MyProtocols_MelanyRodriguez.Models
 
                 //agregamos mecanismos de seguridad, en este caso API Key
                 Request.AddHeader(Services.APIConection.ApiKeyName, Services.APIConection.ApiKeyValue);
+
+                Request.AddHeader(GlobalObjects.ContentType, GlobalObjects.MimeType);
 
                 //ejecutar la llamada al API
                 RestResponse response = await client.ExecuteAsync(Request);
