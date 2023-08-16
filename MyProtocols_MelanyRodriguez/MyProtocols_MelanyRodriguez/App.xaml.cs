@@ -13,7 +13,7 @@ namespace MyProtocols_MelanyRodriguez
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            //DependencyService.Register<MockDataStore>();
 
             //definimos la forma de apilar paginas en la pantalla y cual es la primera pagina 
             //que mostraremos

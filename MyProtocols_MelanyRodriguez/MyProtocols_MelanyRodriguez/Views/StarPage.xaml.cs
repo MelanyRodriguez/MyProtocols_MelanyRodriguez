@@ -22,5 +22,10 @@ namespace MyProtocols_MelanyRodriguez.Views
         {
             LblUserName.Text = GlobalObjects.MyLocalUser.Nombre.ToUpper();
         }
+
+        private async void BtnUserManadgment_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserManadgmentPage());
+        }
     }
 }

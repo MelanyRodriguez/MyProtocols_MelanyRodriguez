@@ -49,5 +49,14 @@ namespace MyProtocols_MelanyRodriguez.Views
                 await DisplayAlert("):", "something went wrong...", "OK");
             }
         }
+
+        //private void BtnCncel_Clicked(object sender, EventArgs e)
+        //{
+        //}
+
+        private async void BtnCancel_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }

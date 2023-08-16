@@ -50,6 +50,28 @@ namespace MyProtocols_MelanyRodriguez.ViewModels
             finally { IsBusy = false; }
         }
 
+        public async Task<bool> UpdateUser(UserDTO pUser)
+        {
+            if (IsBusy) return false;
+            IsBusy = true;
+
+            try
+            {
+                MyUserDTO = pUser;
+                bool R = await MyUserDTO.UpdateUserAsync();
+                
+                return R;
+
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+            finally { IsBusy = false; }
+        }
+
+
         //funcion para validar el ingreso del usuario al app por medio del login
 
         public async Task<bool> UserAccessValidation(string pEmail, string pPassword)
