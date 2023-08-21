@@ -27,5 +27,10 @@ namespace MyProtocols_MelanyRodriguez.Views
         {
             await Navigation.PushAsync(new UserManadgmentPage());
         }
+
+        private async void BtnProtocolManadgment_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProtocolListPage());
+        }
     }
 }
