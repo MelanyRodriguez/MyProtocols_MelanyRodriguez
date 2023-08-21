@@ -169,5 +169,31 @@ namespace MyProtocols_MelanyRodriguez.ViewModels
             finally { IsBusy = false; }
         }
 
+        public async Task<bool> UpdatePasswordUser(UserDTO pPassword)
+        {
+            if (IsBusy) return false;
+            IsBusy = true;
+
+            try
+            {
+                MyUserDTO = pPassword;
+                bool R = await MyUserDTO.UpdatePasswordUserAsync();
+
+                return R;
+
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+            finally { IsBusy = false; }
+        }
+
+
+
+
+
+
     }
 }
